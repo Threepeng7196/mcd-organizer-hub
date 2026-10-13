@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>麦麦主办方 · 团餐派对策划台 | 麦当劳创意开发大赛参赛作品</title>
+<meta name="description" content="面向漫展 / 宅舞 / 社团活动主办方的麦当劳企业团餐批量采购 + 主题派对预约一站式 Skill。按人数/预算/忌口自动配餐核价分账，按城市→门店→日期→场次预约派对。" />
+<style>
+  :root{
+    --red:#E4002B; --red-d:#B80022; --yellow:#FFC72C; --ink:#1a1a1a;
+    --gray:#6b6b6b; --bg:#fff; --bg2:#fff8ef; --line:#f0e4d3; --card:#ffffff;
+    --shadow:0 10px 30px rgba(228,0,43,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+  .brand .dot{width:30px;height:30px;border-radius:8px;background:var(--red);color:#fff;display:grid;place-items:center;font-size:16px}
+  .nav-links{display:flex;gap:18px;align-items:center;font-size:14px;font-weight:600}
+  .nav-links a:hover{color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:11px 22px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;box-shadow:0 6px 16px rgba(228,0,43,.25)}
+  .btn:hover{background:var(--red-d);transform:translateY(-1px)}
+  .btn.ghost{background:#fff;color:var(--red);border:2px solid var(--red)}
+  .btn.ghost:hover{background:var(--bg2)}
+  /* hero */
+  header.hero{background:linear-gradient(135deg,#fff 0%,var(--bg2) 100%);padding:74px 0 64px;border-bottom:1px solid var(--line)}
+  .hero h1{font-size:46px;line-height:1.15;font-weight:900;letter-spacing:-.5px}
+  .hero h1 .hl{color:var(--red)}
+  .hero p.lead{font-size:19px;color:var(--gray);margin:20px 0 30px;max-width:680px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .badges{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .badge{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--gray)}
+  .badge b{color:var(--red)}
+  /* sections */
+  section{padding:64px 0}
+  .sec-head{text-align:center;margin-bottom:42px}
+  .sec-head h2{font-size:32px;font-weight:900}
+  .sec-head p{color:var(--gray);margin-top:10px;font-size:16px}
+  /* scenes */
+  .scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .scene{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+  .scene .emoji{font-size:34px}
+  .scene h3{font-size:18px;margin:12px 0 8px}
+  .scene p{color:var(--gray);font-size:14px}
+  /* features */
+  .feats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .feat{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+  .feat .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--bg2);color:var(--red);display:grid;place-items:center;font-size:22px;font-weight:800}
+  .feat h3{font-size:17px;margin-bottom:6px}
+  .feat p{color:var(--gray);font-size:14px}
+  /* flow */
+  .flow{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:34px}
+  .flow-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600}
+  .chip.t{background:var(--red);color:#fff;border-color:var(--red)}
+  .arrow{color:var(--red);font-weight:800}
+  .flow h4{font-size:16px;margin:6px 0 14px}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow);position:relative}
+  .step .n{position:absolute;top:18px;right:22px;font-size:40px;font-weight:900;color:var(--bg2)}
+  .step h3{color:var(--red);font-size:17px;margin-bottom:8px}
+  .step p{color:var(--gray);font-size:14px}
+  .step code{background:var(--bg2);padding:2px 7px;border-radius:6px;font-size:13px;color:var(--ink)}
+  /* cta box */
+  .cta-box{background:var(--red);color:#fff;border-radius:22px;padding:48px;text-align:center}
+  .cta-box h2{font-size:30px;margin-bottom:12px}
+  .cta-box p{opacity:.92;margin-bottom:24px}
+  .cta-box .btn{background:#fff;color:var(--red)}
+  .cta-box .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+  .cta-box .btn.ghost:hover{background:rgba(255,255,255,.12)}
+  /* footer */
+  footer{padding:40px 0;border-top:1px solid var(--line);color:var(--gray);font-size:14px;text-align:center}
+  footer a{color:var(--red);font-weight:600}
+  .note{font-size:13px;color:var(--gray);text-align:center;margin-top:14px}
+  @media(max-width:780px){
+    .hero h1{font-size:34px}.scenes,.feats,.steps{grid-template-columns:1fr}
+    .nav-links a:not(.btn){display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="brand"><span class="dot">🍔</span> 麦麦主办方</div>
+    <div class="nav-links">
+      <a href="#features">功能</a>
+      <a href="#flow">工作流</a>
+      <a href="#how">怎么用</a>
+      <a class="btn" href="https://github.com/Threepeng7196/mcd-organizer-hub" target="_blank" rel="noopener">⭐ Star on GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>几十号人的团餐、派对预约<br>交给 <span class="hl">麦麦主办方</span> 来算</h1>
+    <p class="lead">一个面向<strong>漫展 / 宅舞 / 社团活动主办方</strong>的麦当劳团餐 + 派对一站式策划 Skill。输入人数、预算、忌口，自动生成不超预算、已叠满减的采购提案并核价分账；按城市 → 门店 → 日期 → 场次预约主题派对。所有下单前 100% 二次确认。</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://github.com/Threepeng7196/mcd-organizer-hub" target="_blank" rel="noopener">⭐ 给项目点个 Star</a>
+      <a class="btn ghost" href="https://www.workbuddy.cn/?fromSource=gwzcw.22245487.22245487.22245487" target="_blank" rel="noopener">用 WorkBuddy 体验</a>
+    </div>
+    <div class="badges">
+      <span class="badge"><b>麦当劳创意开发大赛</b> 参赛作品</span>
+      <span class="badge">基于 <b>麦当劳中国 MCP</b></span>
+      <span class="badge">WorkBuddy <b>官方合作伙伴</b></span>
+      <span class="badge">纯文档 Skill · 开源</span>
+    </div>
+  </div>
+</header>
+
+<section id="scenes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>主办方最头疼的体力活，它包了</h2>
+      <p>这些场景你一定熟——以前靠手算，现在说一句话</p>
+    </div>
+    <div class="scenes">
+      <div class="scene"><div class="emoji">🎪</div><h3>漫展散场团餐</h3><p>散场 12 个人、预算 600、2 个不吃辣、1 个不吃牛肉——自动出一份不超预算、避开忌口、已叠团餐满减的采购单。</p></div>
+      <div class="scene"><div class="emoji">💃</div><h3>宅舞社团聚餐</h3><p>几十号人拼单，谁点了什么、人均多少、怎么分账，一键生成可分享清单，不再群里对账到半夜。</p></div>
+      <div class="scene"><div class="emoji">🎂</div><h3>活动主题派对</h3><p>给社团办麦麦主题派对？按城市 → 门店 → 日期 → 场次，把可约时段一次性列出来，确认后直接预约。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>核心功能</h2>
+      <p>团餐采购、派对预约、分账对账，一条龙</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><div class="ic">🍱</div><div><h3>企业团餐批量采购</h3><p>按人数 / 总预算 / 忌口 / 取餐方式生成提案，自动叠加团餐满减，逐单官方核价，绝不"为了凑单超预算"。</p></div></div>
+      <div class="feat"><div class="ic">🎉</div><div><h3>主题派对预约</h3><p>生日派对 / 主题派对 / 麦麦体验营 / 品鉴会 / 读书会 / 积分兑换活动，串成完整的预约闭环。</p></div></div>
+      <div class="feat"><div class="ic">🧾</div><div><h3>分账与执行</h3><p>整单按人 / 按组拆分，输出可分享的采购清单与人均明细，下单前全部二次确认。</p></div></div>
+      <div class="feat"><div class="ic">🛡️</div><div><h3>安全二次确认</h3><p>涉及下单 / 预约等写操作，一律先说明将要调用的工具与参数，得到确认后才执行，不下静默单。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>两条真实可用的 MCP 工作流</h2>
+      <p>全部基于麦当劳中国官方 MCP Server（35 个工具），工具名真实可查</p>
+    </div>
+    <div class="flow">
+      <h4>🍱 团餐链路（beType=6 企业团餐）</h4>
+      <div class="flow-row">
+        <span class="chip t">query-nearby-stores</span><span class="arrow">→</span>
+        <span class="chip">query-meals 搭配</span><span class="arrow">→</span>
+        <span class="chip">query-meal-assistance 助餐</span><span class="arrow">→</span>
+        <span class="chip">query-promotions 满减</span><span class="arrow">→</span>
+        <span class="chip t">calculate-price 核价</span><span class="arrow">→</span>
+        <span class="chip">分账清单</span><span class="arrow">→</span>
+        <span class="chip">create-order（确认后）</span>
+      </div>
+      <h4>🎉 派对链路（shopId=5）</h4>
+      <div class="flow-row">
+        <span class="chip">mall-points-products 取商品</span><span class="arrow">→</span>
+        <span class="chip">query-party-city 城市</span><span class="arrow">→</span>
+        <span class="chip">query-party-store 门店</span><span class="arrow">→</span>
+        <span class="chip">query-party-store-date 日期</span><span class="arrow">→</span>
+        <span class="chip">query-party-store-session 场次</span><span class="arrow">→</span>
+        <span class="chip t">party-order-create（确认后）</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>三步上手</h2>
+      <p>接入你自己的麦当劳 MCP，马上能用</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><h3>拿 Token</h3><p>访问 <code>open.mcd.cn/mcp</code>，手机号登录后「控制台 → 激活」申请你的 Bearer Token。</p></div>
+      <div class="step"><span class="n">2</span><h3>接 WorkBuddy</h3><p>在 WorkBuddy 连接器填入 <code>mcp-config.example.json</code>（把占位符换成你的 Token），启用并信任。</p></div>
+      <div class="step"><span class="n">3</span><h3>开口说需求</h3><p>「12 人、预算 600、2 不吃辣，出团餐单」或「北京办派对看哪些门店能约」——AI 调用 MCP 完成。</p></div>
+    </div>
+    <p class="note">本页为项目展示页。真正的团餐 / 派对功能需在 WorkBuddy 内接入你的麦当劳 MCP Token 后使用（Token 仅存于你本地，不会上传）。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>觉得有用？来 GitHub 点个 Star ⭐</h2>
+      <p>排名按公开 Star 数计算，你的每一个 Star 都是实打实的支持。</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a class="btn" href="https://github.com/Threepeng7196/mcd-organizer-hub" target="_blank" rel="noopener">⭐ 前往 Star</a>
+        <a class="btn ghost" href="https://github.com/Threepeng7196/mcd-organizer-hub" target="_blank" rel="noopener">查看源码</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>🍔 麦麦主办方 · 团餐派对策划台 — <a href="https://github.com/Threepeng7196/mcd-organizer-hub" target="_blank" rel="noopener">GitHub</a></p>
+    <p style="margin-top:8px">麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品，仅供参赛与学习交流</p>
+  </div>
+</footer>
+
+</body>
+</html>

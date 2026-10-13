@@ -4,6 +4,21 @@
 > 本仓库由参赛者独立开发，非麦当劳官方产品，仅供参赛与学习交流。
 > 建议仓库名：`mcd-organizer-hub`（你建仓库时可自定义）
 
+<p align="center">
+  <a href="https://github.com/Threepeng7196/mcd-organizer-hub/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Threepeng7196/mcd-organizer-hub?style=social"></a>
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+  <img alt="MCP" src="https://img.shields.io/badge/MCP-mcd--mcp%201.0.0-red">
+  <img alt="Contest" src="https://img.shields.io/badge/麦当劳创意开发大赛-参赛作品-yellow">
+</p>
+
+<p align="center">
+  <a href="https://github.com/Threepeng7196/mcd-organizer-hub"><strong>⭐ 觉得有用请点 Star</strong></a> ·
+  <a href="https://github.com/Threepeng7196/mcd-organizer-hub">查看源码</a> ·
+  <a href="https://www.workbuddy.cn/?fromSource=gwzcw.22245487.22245487.22245487">用 WorkBuddy 体验</a>
+</p>
+
+> 🌐 项目展示页（落地页）：见仓库内 [`index.html`](./index.html)，可本地打开，或访问发布的在线版本了解项目全貌。
+
 ## 项目介绍
 
 一个面向**漫展 / 宅舞 / 社团活动主办方**的麦当劳团餐 + 派对一站式策划 Skill。
@@ -55,12 +70,23 @@ AI：（mall-points-products 取派对商品 spuId → query-party-city → quer
 ```
 .
 ├── README.md                # 本文件（必交）
+├── index.html               # 项目展示落地页（可发布到云端引流）
 ├── CONTEST_DECLARATION.md   # 参赛声明（必交，内容不可改）
 ├── MCP_INTEGRATION.md       # MCP 接入说明（必交）
 ├── mcp-config.example.json  # 脱敏 MCP 配置示例（必交）
 ├── SKILL.md                 # Skill 源码/定义（必交：源代码）
 └── workbuddy.md             # WorkBuddy 对话上下文（参与 WorkBuddy 专项奖时必交）
 ```
+
+## 🌟 支持一下
+
+本项目参加**麦当劳程序员创意开发大赛**，排名按公开 GitHub Star 数计算。如果这个项目对你有启发：
+
+- 点个 **Star** ⭐：https://github.com/Threepeng7196/mcd-organizer-hub
+- 分享给同样办活动、带团队订餐的朋友
+- 在 Issues 里提建议或报 bug
+
+你的每个 Star 都是实打实的支持，感谢！
 
 ## 注意事项
 
